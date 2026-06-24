@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahi Rasoi | Premium Pure Vegetarian Indian Cuisine</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <header id="header">
+        <nav class="navbar">
+            <a href="#" class="brand-logo">SHAHI<span>RASOI</span></a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#chefs" class="nav-link">Chef</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#reservation" class="nav-link">Reservation</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-btn" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
+                <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Experience the Royalty of <span>Pure Vegetarian</span> Taste</h1>
+            <p>Pure Vegetarian Delights with Authentic Indian Taste. Crafted by legacy chefs using ancestral recipes and
+                modern molecular execution.</p>
+            <div class="hero-btns">
+                <a href="#reservation" class="btn btn-primary">Book Table</a>
+                <a href="#menu" class="btn btn-secondary">View Menu</a>
+            </div>
+        </div>
+        <div class="hero-images">
+            <img src="./image/images.jpeg"
+                class="floating-dish" alt="Luxury Thali">
+        </div>
+    </section>
+
+    <section id="about" class="section mandala-bg">
+        <div class="about-img-box">
+            <img src="./image/iteli.png"
+                alt="Restaurant Interior" class="about-img">
+            <div class="about-badge">
+                <h3>25+</h3>
+                <p>Years of Culinary Glory</p>
+            </div>
+        </div>
+        <div class="about-text">
+            <h2 class="section-title" style="text-align:left; margin-bottom:20px;">Our Heritage Story</h2>
+            <p>Rooted deep within traditional Indian hospitality, Shahi Rasoi serves premium culinary marvels curated
+                strictly from organic green farms. Our mission is to preserve clean, satvik, and rich legacy dining
+                patterns while ensuring zero structural compromise on modern presentation.</p>
+            <p><strong>100% Pure Vegetarian Guarantee:</strong> No meat items ever enter our facility limits, ensuring
+                the complete preservation of pure culinary holiness.</p>
+            <a href="#reservation" class="btn btn-primary">Discover More</a>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <h2 class="section-title">The Royal Luxuries We Offer</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-leaf"></i>
+                <h3>Pure Vegetarian</h3>
+                <p>Completely satvik execution with pristine herbal purity checks.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-seedling"></i>
+                <h3>Fresh Ingredients</h3>
+                <p>Hand-picked organic goods fetched directly from structural local farms daily.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-virus"></i>
+                <h3>Hygienic Kitchen</h3>
+                <p>Fully certified zero-contact automated automated execution layout chambers.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Family Friendly</h3>
+                <p>Elegant royal seating architectures structured to host premium family gatherings.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories" class="section">
+        <h2 class="section-title">Explore Global Royal Classes</h2>
+        <div class="categories-slider">
+            <div class="category-item active" onclick="filterCategory('all')"><i class="fas fa-utensils"></i>All
+                Culinary</div>
+            <div class="category-item" onclick="filterCategory('north')"><i class="fas fa-bowl-rice"></i>North Indian
+            </div>
+            <div class="category-item" onclick="filterCategory('south')"><i class="fas fa-circle-dot"></i>South Indian
+            </div>
+            <div class="category-item" onclick="filterCategory('fastfood')"><i class="fas fa-burger"></i>Fast Food</div>
+            <div class="category-item" onclick="filterCategory('thali')"><i class="fas fa-tray"></i>Special Thali</div>
+        </div>
+    </section>
+
+    <section id="menu" class="section mandala-bg">
+        <h2 class="section-title">The Imperial Menu Selection</h2>
+        <div class="menu-controls">
+            <div class="search-box">
+                <input type="text" id="menu-search" placeholder="Search culinary items..." onkeyup="searchMenu()">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="filter-tags">
+                <button class="filter-tag active" onclick="filterCategory('all')">Complete Catalog</button>
+                <button class="filter-tag" onclick="filterCategory('north')">North Specialties</button>
+                <button class="filter-tag" onclick="filterCategory('south')">South Coastal</button>
+                <button class="filter-tag" onclick="filterCategory('fastfood')">Indo-Continental</button>
+            </div>
+        </div>
+
+        <div class="menu-grid" id="menu-container"></div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">The Maharaja Signature Creations</h2>
+        <div class="slider-container">
+            <div class="slide active"
+                style="background-image: url('./image/Royal.webp')">
+                <div class="slide-content">
+                    <h3>The Royal Heritage Shahi Thali</h3>
+                    <p>A panoramic assortment comprising 12 rare traditional seasonal preparations celebrating dynamic
+                        regional legacies.</p>
+                </div>
+            </div>
+            <div class="slide"
+                style="background-image: url('./image/image.jpeg')">
+                <div class="slide-content">
+                    <h3>No-Bake Banana Split Cheesecake Recipe</h3>
+                    <p>Creamy no-bake cheesecake layered with fresh bananas, pineapple, and whipped topping, finished with chocolate drizzle and cherries for a classic banana split flavor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="chefs" class="section">
+        <h2 class="section-title">Our Master Culinary Architects</h2>
+        <div class="chef-grid" id="card">
+        </div>
+    </section>
+
+    <section id="certificates" class="section" style="background: var(--bg-dark); color:white;">
+        <h2 class="section-title">Global Compliance & Accolades</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-award"></i>
+                <h3>FSSAI Gold Core Apex</h3>
+                <p>100% Top Tier Grade structural metric clearances maintained annually.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-star-halved"></i>
+                <h3>Epicurean Choice Awards</h3>
+                <p>Ranked #1 Elite Pure Vegetarian Family Restaurant within metropolitan domains.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="section">
+        <div class="stats-grid">
+            <div class="stat-box">
+                <h2 class="counter" data-target="150000">0</h2>
+                <p>Delighted Customers</p>
+            </div>
+            <div class="stat-box">
+                <h2 class="counter" data-target="45">0</h2>
+                <p>Elite Specialized Chefs</p>
+            </div>
+            <div class="stat-box">
+                <h2 class="counter" data-target="25">0</h2>
+                <p>Years in Service</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section mandala-bg">
+        <h2 class="section-title">Reviews From Our Premium Guests</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial-card active">
+                <img src="./image/photo.jpeg"
+                    alt="Guest Review">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"The glassmorphism aesthetic and royal treatment are fantastic, but the Paneer Makhani is an
+                    unparalleled culinary revelation. Absolutely unmatched elite execution format!"</p>
+                <h4>Vikramaditya Roy</h4>
+            </div>
+            <div class="testimonial-card">
+                <img src="./image/gggg.png"
+                    alt="Guest Review">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Pure pristine family atmosphere. It's incredibly refreshing to find an elite high-end luxury setting
+                    that provides verified completely pure vegetarian menus."</p>
+                <h4>Meera Deshmukh</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2 class="section-title">Glimpses of The Grand Palace</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./image/photo.png"
+                    alt="Lounge Area">
+                <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./image/photo1.jpeg"
+                    alt="Royal Dining Setup">
+                <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./image/Royal.jpeg"
+                    alt="Signature Presentation">
+                <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img" src="" alt="Enlarged View"></div>
+
+    <section id="reservation" class="section">
+        <div class="reserve-container">
+            <h2 class="section-title">Secure An Imperial Table</h2>
+            <form class="reserve-form" onsubmit="handleReservation(event)">
+                <div class="form-group"><label>Full Name</label><input type="text" required placeholder="Your Name">
+                </div>
+                <div class="form-group"><label>Phone Number</label><input type="tel" required
+                        placeholder="Your Mobile Node"></div>
+                <div class="form-group"><label>Date of Visit</label><input type="date" required></div>
+                <div class="form-group">
+                    <label>Total Guests</label>
+                    <select>
+                        <option>2 Royal Guests</option>
+                        <option>4-6 Family Assembly</option>
+                        <option>Corporate Group (10+)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Imperial Booking Request</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Navigate To Our Kingdom</h2>
+        <div class="contact-wrapper">
+            <div class="map-box">
+                <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29038163.293207392!2d36.87581149999998!3d27.322648999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396d0500695abf9d%3A0xe6b1e04239d9db9d!2z4KSw4KWJ4KSv4KSyIOCkquCliOCksuClh-CkuA!5e0!3m2!1shi!2sin!4v1781764233844!5m2!1shi!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="contact-info-box">
+                <div>
+                    <div class="info-item"><i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>Royal Palace Arcade, Floor 3, Block 5, Luxury Hub Town, India</p>
+                        </div>
+                    </div>
+                    <div class="info-item"><i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Operational Hours</h3>
+                            <p>Mon - Sun: 11:00 AM - 11:30 PM</p>
+                        </div>
+                    </div>
+                    <div class="info-item"><i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>E-Mail Communications</h3>
+                            <p>concierge@shahirasoi.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="floating-actions">
+        <a href="https://wa.me/9166452446" target="_blank" class="float-btn btn-whatsapp"><i
+                class="fab fa-whatsapp"></i></a>
+        <a href="tel:9166452446" class="float-btn btn-call"><i class="fas fa-phone"></i></a>
+        <div id="backToTop" class="float-btn back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>SHAHI RASOI</h3>
+                <p>Delivering uncompromised premium pure culinary masterpieces continuously preserving ancestral legacy
+                    configurations safely.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navigation Nodes</h3>
+                <ul>
+                    <li><a href="#about">Heritage Story</a></li>
+                    <li><a href="#menu">Imperial Menu</a></li>
+                    <li><a href="#reservation">Secure Seating</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>The Royal Dispatch</h3>
+                <p>Subscribe to receive custom invitations to seasonal imperial menu tasting assemblies.</p>
+                <form class="newsletter-form"
+                    onsubmit="event.preventDefault(); alert('Successfully enrolled inside Royal Dispatch List.');">
+                    <input type="email" placeholder="Enter elite email" required>
+                    <button class="btn btn-primary" type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Shahi Rasoi Culinary Holdings. Crafted elegantly with deep pure architectural protocols.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
